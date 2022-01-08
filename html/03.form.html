@@ -7,13 +7,119 @@
   <title>Form 요소</title>
   <link rel="stylesheet" href="../css/all.min.css">
 </head>
+<style>
+  .wrapper {max-width: 800px; margin: 50px auto; }
+  /* input {font-size: 24px; width: 100px;} */
+  .input-wrap {padding: 10px 0;}
+  .input-wrap input[type="text"],
+  .input-wrap input[type="password"],
+  .input-wrap input[type="number"]
+  {width: 100%; font-size: 18px; padding: 6px; border: 1px solid #ccc;}
+  .input-wrap label {margin-right: 16px;}
+  .input-wrap select {padding: 6px; font-size: 16px;}
+  .input-wrap select.tel,
+  .input-wrap input.tel {width:100px; text-align: center;}
+  .input-wrap textarea {width:100%; max-width: 100%; min-height: 300px; padding: 16px;}
+</style>
 <body>
-  <form action="서버주소">
-    <input type="text" name="name">
-    <input type="number" name="ssn1">
-    <input type="number" name="ssn2">
-    <input type="text" name="email">
+  <div class="wrapper">
+  <form action="//search.naver.com/search.naver">
+    네이버
+    <input type="text" name="query">
     <button type="submit">전송</button>
   </form>
+</div>
+  <div class="wrapper">
+  <form action="//search.daum.net/search">
+    다음
+    <input type="text" name="q">
+    <button type="submit">전송</button>
+  </form>
+</div>
+  <div class="wrapper">
+  <form action="//google.com/search">
+    구글
+    <input type="text" name="q">
+    <button type="submit">전송</button>
+  </form>
+</div>
+<div class="wrapper">
+<form action="#">
+  <div class="input-wrap">
+    <input type="text" name="name" placeholder="Name" maxlength="3" value="">
+  </div>
+
+  <div class="input-wrap">
+    <input type="number" name="age" placeholder="Age" step="10" max="100" min="0" value="">
+  </div>
+
+  <div class="input-wrap">
+    <input type="password" name="passwd" placeholder="password" max="100" maxlength="16" minlength="8" value="">
+  </div>
+
+  <div class="input-wrap">
+    <input type="radio" id="radioMan" name="gender" value="man" checked><label for="radioMan">남자</label>
+    <input type="radio" id="radioWoman" name="gender" value="woman"><label for="radioWoman">여자</label>
+    <!-- <label><input type="radio" name="gender" value="man" checked>남자</label>
+    <label><input type="radio" name="gender" value="woman">여자</label> -->
+  </div>
+
+  <div class="input-wrap">
+  <input type="checkbox" name="hobby" id="chkMusic" value="음악감상">
+  <label for="chkMusic">음악감상</label>
+  <input type="checkbox" name="hobby" id="chkMovie" value="영화감상">
+  <label for="chkMovie">영화감상</label>
+  <input type="checkbox" name="hobby" id="chkShopping" value="쇼핑">
+  <label for="chkShopping">쇼핑</label>
+  <input type="checkbox" name="hobby" id="chkSwim" value="수영">
+  <label for="chkSwim">수영</label>
+  </div>
+  <div class="input-wrap">
+    <input type="file" name="upfile">
+  </div>
+  <div class="input-wrap" >
+    <select name="tel1" class="tel">
+    <option value="" selected>선택</option>
+    <option value="010">010</option>
+    <option value="011">011</option>
+    <option value="016">016</option>
+    <option value="017">017</option>
+    <option value="018">018</option>
+    <option value="019">019</option>
+    </select>
+    -
+    <input type="tel" name="tel2" class="tel" maxlength="4" minlength="4">
+    -
+    <input type="tel" name="tel3" class="tel" maxlength="4" minlength="4">
+  </div>
+  <div class="input-wrap">
+    <textarea name="content" placeholder="내용을 입력하세요."></textarea>
+    </div>
+
+      <h1>Input 유형</h1>
+
+    <div class="input-wrap">
+      <h2>IE11에서 사용 불가능</h2>
+      <input type="color" name="color">
+      <input type="hidden" name="chk" value="비밀값">
+      <input type="date" name="date">
+      <input type="datetime-local" name="datetime-local">
+      <input type="time" name="time">
+      <input type="month" name="month">
+    </div>
+
+      <div class="input-wrap">
+      <h2>HTML5에서 추가된 type - 사용 가능</h2>
+      <input type="email" name="email">
+      <input type="url" name="url">
+      <input type="range" name="volume" min="0" max="10" step="1" value="5">
+      <input type="search" name="search">
+    </div>
+
+  <div class="input-wrap">
+    <button type="submit">전송</button>
+  </div>
+</form>
+</div>
 </body>
 </html> 
