@@ -19,14 +19,19 @@ p.content{ color: #111;  text-align: justify; line-height: 1.5;}
 
 
 /****************************** .header-wrapper **********************************/
-.header-wrapper {background-color:#000; color: #fff;} 
+.header-wrapper {background-color:#000; color: #fff; position: fixed; z-index: 99; width: 100%; left: 0px; top: 0px; box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);} 
 .header-wrapper .navi-wrap {float: left;}
 .header-wrapper .navi-wrap .navi {float: left; padding: 12px 24px;}
 .header-wrapper .navi-wrap .navi:hover {color: #000; background-color: #ddd;}
 .header-wrapper .search-wrap {float: right; padding: 12px 16px; background-color: #000;}
 .header-wrapper .search-wrap:hover {float: right; padding: 12px 16px; background-color: #f30;}
+.header-wrapper .navi-more {display: block;}
+.header-wrapper .navi-more .sub-wrab {background-color: #fff;}
 
-
+/****************************** .main-wrapper **********************************/
+.main-wrapper {position: relative;}
+.main-wrapper .slogan-wrap {position: absolute; bottom: 30px; left: 0; width: 100%;/*내부모크기의백프로*/ text-align: center; color: white;}
+.main-wrapper .slogan-wrap h2.name {margin-bottom: 16px}
 
 /****************************** .band-wrapper **********************************/
 .band-wrapper .member-wrap .member {float: left; width: 33.3333%; padding: 5%;}
